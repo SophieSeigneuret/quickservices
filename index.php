@@ -2,7 +2,6 @@
 require_once 'defines.php';
 $page_title = 'Accueil';
 ?>
-
 <?php
 require_once 'views/page_head.php';
 require_once 'views/header.php';
@@ -13,6 +12,6 @@ require_once 'views/aside.php';
 </main>
 <?php
 require_once 'views/footer.php';
+require_once 'views/javascript.php';
 ?>
-</body>
 </html>

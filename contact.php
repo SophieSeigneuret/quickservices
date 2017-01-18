@@ -12,6 +12,6 @@ require_once 'views/aside.php';
 </main>
 <?php
 require_once 'views/footer.php';
+require_once 'views/javascript.php';
 ?>
-</body>
 </html>
