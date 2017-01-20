@@ -1,6 +1,6 @@
 <?php
 require_once 'defines.php';
-$page_title = 'Garde enfants';
+$page_title = 'garde_enfants';
 ?>
 <?php
 require_once 'views/page_head.php';

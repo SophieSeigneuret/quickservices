@@ -1,6 +1,6 @@
 <?php
 require_once 'defines.php';
-$page_title = 'Soutien scolaire';
+$page_title = 'soutien_scolaire';
 ?>
 <?php
 require_once 'views/page_head.php';
