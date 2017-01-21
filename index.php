@@ -48,6 +48,30 @@ require_once 'views/aside.php';
         <p>3 - Trouvez un emploi rapidement</p>
         <a href="comme_ça_marche.php">en savoir plus</a>
     </section>
+    <section id="candidats">
+        <h2>Les derniers candidats inscrits</h2>
+        <div>
+            <a href="#"><img src="images/christina.jpg" alt="photo Christina"></a>
+            <a href="#"><h3>Christina</h3></a>
+            <p>25 ans</p>
+            <p>Montréal</p>
+            <a href="garde_enfants.php"><h5>Garde d'enfant</h5></a>
+        </div>
+        <div>
+            <a href="#"><img src="images/christina.jpg" alt="photo Thierry"></a>
+            <a href="#"><h3>Thierry</h3></a>
+            <p>29 ans</p>
+            <p>Laval</p>
+            <a href="soutien_scolaire.php"><h5>Soutien scolaire</h5></a>
+        </div>
+        <div>
+            <a href="#"><img src="images/christina.jpg" alt="photo Marie"></a>
+            <a href="#"><h3>Marie</h3></a>
+            <p>36 ans</p>
+            <p>Québec</p>
+            <a href="bricolage_entretien.php"><h5>Entretien</h5></a>
+        </div>
+    </section>
 </main>
 <?php
 require_once 'views/footer.php';
