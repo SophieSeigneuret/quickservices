@@ -1,8 +1,208 @@
+/*************************************************************************************************************************************/
+/*********************** RESET DESKTOP ***********************/
+/*************************************************************************************************************************************/
+
+
+*{
+    box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section, div {
+    display: block;
+}
+
+html {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 16px;
+}
+
+
+/*************************************************************************************************************************************/
+/*********************** VERSION DESKTOP ***********************/
+/*************************************************************************************************************************************/
+
+
+/**** SYSTEME DE GRILLES ********************************************************************************************/
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+
+/** on aligne les colonnes les unes à côté des autres avec la propriété float **/
+[class*="col-"] {
+    float: left;
+    /*
+    padding: 0 15px;
+    */
+}
+
+/** chaque rangée de colonnes doit être enveloppée dans une div de class "row".
+    on applique un clear:both sur chaque row afin d'annuler l'effet de float
+    et éviter que les éléments suivants remontent et entourent le "row"**/
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/*END SYSTEME DE GRILLES*************************************************************************************/
+
+body {
+    min-width: 900px;
+    max-width: 1400px;
+}
+
+#wrapper {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+
+/*********************** HEADER ***********************/
+
+
+/* TOP */
+
+#top {
+    position: relative;
+    height: 100px;
+}
+
+#logo, #connexion {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+#top>a {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+#logo {
+    height: 60px;
+}
+
+#connexion {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+#connexion a {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    padding: 5px;
+    width: 200px;
+    display: inline-block;
+}
+
+#connexion a:first-of-type {
+    border: 1px solid #ff5e2d;
+    margin-right: 10px;
+    /*box-shadow: 2px 2px 0 #9b9b9b;*/
+}
+
+#connexion a:last-of-type {
+    border: 1px solid #5cc6e3;
+}
+
+
+/* IMG_ACCUEIL */
+
+#img_accueil {
+    position: relative;
+}
+
+#img_accueil>img {
+    width: 100%;
+}
+
+#img_accueil h2 {
+    position: absolute;
+    top: 20px;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+
+/* NAV */
+
+nav {
+    background-color: #2278b9;
+    width: 540px;
+    margin: -88px auto 0;
+}
+.rubrique {
+    background-color: #fff;
+    width: 150px;
+    display: inline-block;
+}
+
+.rubrique:nth-last-of-type(2) {
+    margin: 0 20px;
+}
+
+.rubrique hr {
+    width: 50px;
+}
+
+.rubrique h4 {
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.rubrique a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
 .active {
-     background-color: red;
- }
+    color: #2278b9;
+}
 
 nav li a {
     text-decoration: none;
 }
 
+/*********************** FORM CATEGORIE pilar ***********************/
+
+.pa_column_gouche{
+    background-color: #f2f2f2;
+    min-height: 100px;
+}
+.pa_column_droite{
+    background-color: #d9d9d9;
+    min-height: 100px;
+}
+.pa_resultats{
+    background-color: #e6ffff;
+    min-height: 100px;
+    margin: 10px 0 10px 20px;
+}
+.pa_carte{
+    background-color: #00AABD;
+    min-height: 200px;
+    margin: 10px 0 10px 0;
+}
