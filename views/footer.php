@@ -1,18 +1,39 @@
 <?php
 
-$annonces = array('Jardinier', 'Femme de ménage', 'Aide à domicile', 'Bricolage',
-    'Cours particulier', 'Professeur de langue', 'Professeur de musique',
-    'Garde partagée', 'Nounou', 'Babysitter');
+$annonces_garde = array('Babysitting ponctuel', 'Garde régulière', 'Garde partagée', 'Au pair', 'Nounou à domicile',);
+
+$annonces_entretien = array('Ménage - Repassage', 'Cuisine', 'Bricolage', 'Jardinier', 'Déménagement',);
+
+$annonces_cours = array('Sciences', 'Histoire - Géographie', 'Littératures - Langues', 'Art - Musique', 'Informatique',);
 
 ?>
 
 <footer>
     <section>
         <h2>Catégories d'annonces</h2>
-        <?php foreach ($annonces as $metier) { ?>
-            <span>| </span><a href="#"><?= $metier ?></a>
-        <?php } ?>
+        <div>
+            <ul>
+                <?php foreach ($annonces_garde as $metier_garde) { ?>
+                    <li><a href="#"><?= $metier_garde ?></a></li>
+                <?php } ?>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <?php foreach ($annonces_entretien as $metier_entretien) { ?>
+                <li><a href="#"><?= $metier_entretien ?></a></li>
+                <?php } ?>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <?php foreach ($annonces_cours as $metier_cours) { ?>
+                <li><a href="#"><?= $metier_cours ?></a></li>
+                <?php } ?>
+            </ul>
+        </div>
     </section>
+    <hr/>
     <section>
         <p>© Pilar - Sophie 2017 <span>|</span> <a href="#">Nous contacter</a> <span>|</span> <a href="#">Mentions
                 légales</a> <span>|</span> <a href="#">CGU</a></p>

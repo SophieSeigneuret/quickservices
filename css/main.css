@@ -64,10 +64,12 @@ body {
 
 #wrapper {
     width: 100%;
-    text-align: center;
     margin: auto;
 }
 
+main h2 {
+    color: #ac2546;
+}
 
 
 /*********************** HEADER ***********************/
@@ -107,16 +109,17 @@ body {
     padding: 5px;
     width: 200px;
     display: inline-block;
+    text-align: center;
 }
 
 #connexion a:first-of-type {
-    border: 1px solid #ff5e2d;
+    border: 1px solid #ac2546;
     margin-right: 10px;
     /*box-shadow: 2px 2px 0 #9b9b9b;*/
 }
 
 #connexion a:last-of-type {
-    border: 1px solid #5cc6e3;
+    border: 1px solid #2278b9;
 }
 
 
@@ -137,13 +140,17 @@ body {
     margin: auto;
     text-align: center;
     width: 100%;
-    color: #2278b9;
+    color: #000000;
     text-shadow: 2px 2px 0 #fff;
 }
 
 
 /* --------------------------------------------- */
 /* NAV */
+
+#menu {
+    text-align: center;
+}
 
 nav {
     /*background-color: #2278b9;*/
@@ -174,16 +181,23 @@ nav {
     color: #3b4452;
 }
 
+.rubrique h4:hover {
+    color: #2278b9;
+}
 
+.active h4 {
+    color: #ac2546;
+}
 
 
 /* --------------------------------------------- */
 /* FORMULAIRE RECHERCHE ACCUEIL */
 
 #form_recherche {
-    background-color: #ff5e2d;
+    background-color: #ac2546;
     padding: 50px;
     margin-top: 50px;
+    text-align: center;
 }
 
 #form_recherche div {
@@ -193,6 +207,7 @@ nav {
 #form_recherche label {
     font-size: 1.5rem;
     margin: 0 5px 0 15px;
+    color: #fff;
 }
 
 #form_recherche select, #form_recherche input {
@@ -201,11 +216,9 @@ nav {
     width: 180px;
 }
 
-/*#form_recherche>input {*/
-    /*display: block;*/
-    /*background-color: #2278b9;*/
-    /*margin: auto;*/
-/*}*/
+#form_recherche>input {
+    color: #ac2546;
+}
 
 #search_submit {
     border-radius: 0;
@@ -216,9 +229,7 @@ nav {
 
 /* --------------------------------------------- */
 
-.active h4 {
-    color: #2278b9;
-}
+
 
 
 
@@ -229,12 +240,23 @@ nav {
 
 #avantages {
     margin: 50px 0;
+    color: #3b4452;
+    text-align: center;
 }
 
-.avantages {
+#avantages h3 {
+    color: #2278b9;
+}
+
+.avantage {
     display: inline-block;
+    vertical-align: top;
     width: 30%;
     padding: 15px;
+}
+
+#avantages>p {
+    padding: 0 50px;
 }
 
 .avantages img {
@@ -243,27 +265,63 @@ nav {
     border-radius: 50px;
 }
 
+.avantage:nth-of-type(2) {
+    border-left: 1px solid #c0c0c0;
+    border-right: 1px solid #c0c0c0;
+}
+
+
 
 /* --------------------------------------------- */
 /* SECTION COMMENT ÇA MARCHE */
 
 #ccm {
-    margin-top: 50px;
+    padding: 50px 0;
+    border-top: 1px solid #c0c0c0;
+    border-bottom: 1px solid #c0c0c0;
+    margin: 0 50px;
+    color: #3b4452;
+    text-align: center;
 }
+
+#ccm h3 {
+    background-color: #3b4452;
+    color: #fff;
+    padding: 15px;
+    width: 270px;
+}
+
+#ccm div {
+    display: inline-block;
+    width: 49%;
+    text-align: left;
+    padding-left: 100px;
+}
+
+#ccm div:last-of-type {
+    border-left: 1px solid #c0c0c0;
+}
+
+#ccm a {
+    text-decoration: none;
+    color: #2278b9;
+}
+
 
 
 /* --------------------------------------------- */
 /* SECTION CANDIDATS */
 
 #candidats {
-    background-color: silver;
     padding: 50px;
+    text-align: center;
 }
 
 #candidats div {
     display: inline-block;
-    width: 30%;
-    border: 1px solid black;
+    width: 25%;
+    margin: 0 2%;
+    /*border: 1px solid black;*/
 }
 
 #candidats div img {
@@ -273,18 +331,59 @@ nav {
     background-color: white;
 }
 
+#candidats h3 {
+    color: #3b4452;
+    margin-bottom: 5px;
+}
+
+#candidats a {
+    text-decoration: none;
+    color: #ac2546;
+}
+
+#candidats p {
+    margin: 0;
+}
+
+#candidats h5 {
+    margin: 10px 20px;
+    padding-top: 10px;
+    border-top: 1px solid #c0c0c0;
+}
 
 
 /*********************** FOOTER ***********************/
 
+footer {
+    background-color: #3b4452;
+    color: #fff;
+    text-align: center;
+}
+
 footer section:first-of-type {
-    background-color: #2278b9;
     padding: 50px;
 }
 
+footer section:first-of-type div {
+    display: inline-block;
+    width: 30%;
+}
+
+footer li {
+    text-align: left;
+    color: #fff;
+}
+
+footer a:hover {
+    color: #2278b9;
+}
+
+footer hr {
+    color: #fff;
+    margin: 0 50px;
+}
 
 footer section:last-of-type {
-    background-color: #3b4452;
     padding: 50px;
 }
 
@@ -302,6 +401,9 @@ footer a {
     margin: 0 20px;
 }
 
+#footer span {
+    color: #2278b9;
+}
 
 
 
