@@ -72,7 +72,7 @@ body {
 
 /*********************** HEADER ***********************/
 
-
+/* --------------------------------------------- */
 /* TOP */
 
 #top {
@@ -121,6 +121,7 @@ body {
 }
 
 
+/* --------------------------------------------- */
 /* IMG_ACCUEIL */
 
 #img_accueil {
@@ -140,10 +141,11 @@ body {
 }
 
 
+/* --------------------------------------------- */
 /* NAV */
 
 nav {
-    background-color: #2278b9;
+    /*background-color: #2278b9;*/
     width: 540px;
     margin: -88px auto 0;
 }
@@ -172,13 +174,119 @@ nav {
 }
 
 
+/* --------------------------------------------- */
+/* FORMULAIRE RECHERCHE ACCUEIL */
 
+#form_recherche {
+    background-color: #ff5e2d;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+#form_recherche div {
+    display: inline-block;
+}
+
+#form_recherche label {
+    font-size: 1.5rem;
+    margin: 0 5px 0 15px;
+}
+
+#form_recherche select {
+    border-radius: 0;
+    height: 40px;
+    width: 180px;
+}
+
+#form_recherche input {
+    height: 40px;
+    width: 180px;
+}
+
+/*#form_recherche>input {*/
+    /*display: block;*/
+    /*background-color: #2278b9;*/
+    /*margin: auto;*/
+/*}*/
+
+#search_submit {
+    border-radius: 0;
+    height: 25px;
+    padding: 0 10px;
+    margin-left: 30px;
+}
+
+
+/* --------------------------------------------- */
 
 .active {
     color: #2278b9;
 }
 
-nav li a {
-    text-decoration: none;
+
+
+/*********************** MAIN ***********************/
+
+#avantages {
+    margin: 50px 0;
 }
+
+.avantages {
+    display: inline-block;
+    width: 30%;
+    padding: 15px;
+}
+
+.avantages img {
+    width: 100px;
+    border: 1px solid #3b4452;
+    border-radius: 50px;
+}
+
+
+#ccm {
+    margin-top: 50px;
+}
+
+
+/*********************** FOOTER ***********************/
+
+footer section:first-of-type {
+    background-color: #2278b9;
+    padding: 50px;
+    margin-top: 30px;
+}
+
+
+footer section:last-of-type {
+    background-color: #3b4452;
+    padding: 50px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#liens_sociaux img {
+    width: 50px;
+    border-radius: 25px;
+}
+
+#liens_sociaux a:nth-of-type(2) {
+    margin: 0 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 

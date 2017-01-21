@@ -28,7 +28,21 @@
                 <a href="soutien_scolaire.php"><h4 class="<?php if($page_title == 'soutien_scolaire'){echo 'active';} ?>">Soutien<br/>scolaire</h4></a>
             </div>
         </nav>
-
     </div>
 
+    <form id="form_recherche" method="post">
+        <div>
+            <label for="nounou">Je cherche </label>
+            <select name="nounou" id="nounou">
+                <option value="1"></option>
+                <option value="nounou">une babysitter</option>
+                <option value="enf">des enfants à garder</option>
+            </select>
+        </div>
+        <div>
+            <label for="lieu">à </label>
+            <input type="text" placeholder="adresse, ville, CP" id="lieu" value="" />
+        </div>
+        <input type="submit" id="search_submit" value="Rechercher">
+    </form>
 </header>
