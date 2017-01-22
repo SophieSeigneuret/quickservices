@@ -64,19 +64,24 @@ body {
 
 #wrapper {
     width: 100%;
-    text-align: center;
     margin: auto;
 }
 
 .container {
     width: 80%;
     margin: 0 auto;
-
 }
+
+main h2 {
+    color: #ac2546;
+    margin-bottom: 50px;
+}
+
+
 
 /*********************** HEADER ***********************/
 
-
+/* --------------------------------------------- */
 /* TOP */
 
 #top {
@@ -106,25 +111,71 @@ body {
 }
 
 #connexion a {
-    display: block;
     text-decoration: none;
     color: #000000;
     padding: 5px;
     width: 200px;
     display: inline-block;
+    text-align: center;
 }
 
 #connexion a:first-of-type {
-    border: 1px solid #ff5e2d;
+    border: 1px solid #ac2546;
     margin-right: 10px;
     /*box-shadow: 2px 2px 0 #9b9b9b;*/
 }
 
 #connexion a:last-of-type {
-    border: 1px solid #5cc6e3;
+    border: 1px solid #2278b9;
+}
+
+/* --------------------------------------------- */
+/* FORMULAIRE CONNEXION */
+
+#form_connexion {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+#form_connexion form {
+    border: 1px solid #c0c0c0;
+    padding: 20px;
+    width: 400px;
+    margin: auto;
+    border-radius: 5px;
+}
+
+#form_connexion label {
+    display: block;
+    color: #3b4452;
+}
+
+#form_connexion input {
+    margin: 5px 0 15px;
+    width: 350px;
+    height: 35px;
+    box-shadow: 2px 2px 0 #6d1424 inset;
+}
+
+#form_connexion form>input:last-of-type {
+    background-color: #ac2546;
+    color: #fff;
+    padding-top: 3px;
+    border: none;
+}
+
+#form_connexion p {
+    color: #3b4452;
+}
+
+#form_connexion a {
+    text-decoration: none;
+    color: #ac2546;
 }
 
 
+/* --------------------------------------------- */
 /* IMG_ACCUEIL */
 
 #img_accueil {
@@ -135,19 +186,26 @@ body {
     width: 100%;
 }
 
-#img_accueil h2 {
+#img_accueil h1 {
     position: absolute;
     top: 20px;
     margin: auto;
     text-align: center;
     width: 100%;
+    color: #000000;
+    text-shadow: 2px 2px 0 #fff;
 }
 
 
+/* --------------------------------------------- */
 /* NAV */
 
+#menu {
+    text-align: center;
+}
+
 nav {
-    background-color: #2278b9;
+    /*background-color: #2278b9;*/
     width: 540px;
     margin: -88px auto 0;
 }
@@ -157,7 +215,11 @@ nav {
     display: inline-block;
 }
 
-.rubrique:nth-last-of-type(2) {
+#menu a {
+    text-decoration: none;
+}
+
+#menu a:nth-of-type(2) {
     margin: 0 20px;
 }
 
@@ -168,23 +230,245 @@ nav {
 .rubrique h4 {
     text-transform: uppercase;
     font-size: 1rem;
+    color: #3b4452;
 }
 
-.rubrique a {
-    text-decoration: none;
-    color: black;
-}
-
-
-
-
-.active {
+.rubrique h4:hover {
     color: #2278b9;
 }
 
-nav li a {
-    text-decoration: none;
+.active h4 {
+    color: #ac2546;
 }
+
+
+/* --------------------------------------------- */
+/* FORMULAIRE RECHERCHE ACCUEIL */
+
+#form_recherche {
+    background-color: #ac2546;
+    padding: 50px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+#form_recherche div {
+    display: inline-block;
+}
+
+#form_recherche label {
+    font-size: 1.5rem;
+    margin: 0 5px 0 15px;
+    color: #fff;
+}
+
+#form_recherche select, #form_recherche input {
+    border-radius: 0;
+    height: 40px;
+    width: 180px;
+}
+
+#form_recherche>input {
+    color: #ac2546;
+}
+
+#search_submit {
+    border-radius: 0;
+    padding: 0 10px;
+    margin-left: 30px;
+}
+
+
+/* --------------------------------------------- */
+
+
+
+
+
+/*********************** MAIN ***********************/
+
+/* --------------------------------------------- */
+/* SECTION AVANTAGES */
+
+#avantages {
+    margin: 50px 0;
+    color: #3b4452;
+    text-align: center;
+}
+
+#avantages h3 {
+    color: #2278b9;
+}
+
+.avantage {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    padding: 15px;
+}
+
+#avantages>p {
+    padding: 0 50px;
+}
+
+.avantages img {
+    width: 100px;
+    border: 1px solid #3b4452;
+    border-radius: 50px;
+}
+
+.avantage:nth-of-type(2) {
+    border-left: 1px solid #c0c0c0;
+    border-right: 1px solid #c0c0c0;
+}
+
+
+
+/* --------------------------------------------- */
+/* SECTION COMMENT ÇA MARCHE */
+
+#ccm {
+    padding: 50px 0;
+    border-top: 1px solid #c0c0c0;
+    border-bottom: 1px solid #c0c0c0;
+    margin: 0 50px;
+    color: #3b4452;
+    text-align: center;
+}
+
+#ccm h3 {
+    background-color: #3b4452;
+    color: #fff;
+    padding: 15px;
+    width: 270px;
+}
+
+#ccm div {
+    display: inline-block;
+    width: 49%;
+    text-align: left;
+    padding-left: 100px;
+}
+
+#ccm div:last-of-type {
+    border-left: 1px solid #c0c0c0;
+}
+
+#ccm a {
+    text-decoration: none;
+    color: #2278b9;
+}
+
+
+
+/* --------------------------------------------- */
+/* SECTION CANDIDATS */
+
+#candidats {
+    padding: 50px;
+    text-align: center;
+}
+
+#candidats div {
+    display: inline-block;
+    width: 25%;
+    margin: 0 2%;
+    /*border: 1px solid black;*/
+}
+
+#candidats div img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-color: white;
+}
+
+#candidats h3 {
+    color: #3b4452;
+    margin-bottom: 5px;
+}
+
+#candidats a {
+    text-decoration: none;
+    color: #ac2546;
+}
+
+#candidats p {
+    margin: 0;
+}
+
+#candidats h5 {
+    margin: 10px 20px;
+    padding-top: 10px;
+    border-top: 1px solid #c0c0c0;
+}
+
+
+/*********************** FOOTER ***********************/
+
+footer {
+    background-color: #3b4452;
+    color: #fff;
+    text-align: center;
+}
+
+footer section:first-of-type {
+    padding: 50px;
+}
+
+footer section:first-of-type div {
+    display: inline-block;
+    width: 30%;
+}
+
+footer li {
+    text-align: left;
+    color: #fff;
+    padding: 2px 0;
+}
+
+footer a:hover {
+    color: #2278b9;
+}
+
+footer hr {
+    color: #fff;
+    margin: 0 50px;
+}
+
+footer section:last-of-type {
+    padding: 50px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#liens_sociaux img {
+    width: 50px;
+    border-radius: 25px;
+}
+
+#liens_sociaux a:nth-of-type(2) {
+    margin: 0 20px;
+}
+
+footer span {
+    color: #2278b9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*********************** FORM CATEGORIE pilar ***********************/
 
