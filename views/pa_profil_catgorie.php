@@ -1,7 +1,12 @@
-<div class="pa_resultats">
+<?php
+
+?>
+
+<div class="pa_sec_recherche">
+    <div class="pa_resultats">
         <div class="row">
             <div class="col-3 photo_profil">
-                <img src="images/koala-sm.jpg" alt="" width="98%" >
+                <img src="images/profil_01.png" alt="" >
             </div>
 
             <div class="col-9 pa_info_profil" >
@@ -11,9 +16,9 @@
                     </div>
 
                     <div class="col-6 picto_accueil">
-                        <img src="images/koala-sm.jpg" alt="" width="20%">
-                        <img src="images/koala-sm.jpg" alt="" width="20%">
-                        <img src="images/koala-sm.jpg" alt="" width="20%">
+                        <img src="images/picto_garde_enfants_30.png" alt="">
+                        <img src="images/picto_entretien_30.png" alt="">
+                        <img src="images/picto_soutien_scolaire_30.png" alt="">
                     </div>
                 </div>
                 <p>On vient de déménager et j'ai pu trouver en une demi-journée unesuper femme de ménage,
@@ -23,9 +28,7 @@
         </div>
     </div>
 
-    <!--<div class="pa_resultats">
-        <p>Profiles</p>
-    </div>
+
     <div class="pa_resultats">
         <p>Profiles</p>
     </div>
@@ -34,4 +37,21 @@
     </div>
     <div class="pa_resultats">
         <p>Profiles</p>
-    </div>-->
+    </div>
+    <div class="pa_resultats">
+        <p>Profiles</p>
+    </div>
+
+
+        <div class="pa_navigation_cat">
+            <a href="#" class="prev_pag"><</a>
+            <a href="#" class="pag_selecteur current">1</a>
+            <a href="#" class="pag_selecteur">2</a>
+            <a href="#" class="pag_selecteur">3</a>
+            <a href="#" class="pag_selecteur">4</a>
+            <a href="#" class="pag_selecteur">5</a>
+            <a href="#" class="next_pag">></a>
+        </div>
+
+
+</div>
