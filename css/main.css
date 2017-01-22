@@ -198,7 +198,7 @@ main h2 {
     margin: auto;
     text-align: center;
     width: 100%;
-    color: #000000;
+    color: #2278b9;
     text-shadow: 2px 2px 0 #fff;
 }
 
@@ -407,6 +407,142 @@ nav {
     margin: 10px 20px;
     padding-top: 10px;
     border-top: 1px solid #c0c0c0;
+}
+
+
+
+
+/*********************** PAGE DÉTAIL ***********************/
+
+hr {
+    margin: 0;
+    color: #c0c0c0;
+}
+
+#detail>a {
+    display: block;
+    text-decoration: none;
+    color: #2278b9;
+    margin: 0 0 20px 20px;
+}
+
+#detail>a::before {
+    content: url(../images/fleche_retour.png);
+    margin-right: 5px;
+    position: relative;
+    top: 5px;
+}
+
+#detail {
+    /*border-top: 1px solid #c0c0c0;*/
+    padding: 50px 0;
+    margin: auto;
+    width: 800px;
+    color: #3b4452;
+}
+
+#detail h2 {
+    margin: 0 0 10px;
+}
+
+#detail h3 {
+    margin: 20px 0 5px;
+    color: #ac2546;
+}
+
+#detail p {
+    text-align: justify;
+    margin: 0;
+}
+
+#detail>img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    margin-right: 30px;
+}
+
+#detail>img, #cv, #me_contacter {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#cv {
+    width: 350px;
+}
+
+#cv p {
+    margin-top: 20px;
+    color: #c0c0c0;
+}
+
+#me_contacter {
+    background-color: #ac2546;
+    width: 200px;
+    height: 110px;
+}
+
+#me_contacter a:first-of-type {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 40px;
+    border-bottom: 1px solid #fff;
+    margin: 0 30px;
+}
+
+#me_contacter img {
+    height: 40px;
+    text-align: center;
+}
+
+#me_contacter>a:nth-of-type(2) img {
+    margin: 15px 20px 0 46px;
+}
+
+#me_contacter>a:last-of-type img {
+    margin: 15px 46px 0 20px;
+}
+
+#encadre, #presentation {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#encadre {
+    width: 200px;
+    margin-right: 30px;
+    padding-left: 20px;
+}
+
+#encadre img {
+    width: 45px;
+}
+
+#presentation {
+    width: 555px;
+}
+
+#detail ul {
+    padding: 0;
+    margin: 0;
+}
+
+#detail li {
+    list-style-type: none;
+}
+
+#presentation a {
+    text-decoration: none;
+    color: #2278b9;
+    display: block;
+    margin-top: 5px;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 
