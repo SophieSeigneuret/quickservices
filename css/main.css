@@ -69,6 +69,7 @@ body {
 
 main h2 {
     color: #ac2546;
+    margin-bottom: 50px;
 }
 
 
@@ -120,6 +121,51 @@ main h2 {
 
 #connexion a:last-of-type {
     border: 1px solid #2278b9;
+}
+
+/* --------------------------------------------- */
+/* FORMULAIRE CONNEXION */
+
+#form_connexion {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+#form_connexion form {
+    border: 1px solid #c0c0c0;
+    padding: 20px;
+    width: 400px;
+    margin: auto;
+    border-radius: 5px;
+}
+
+#form_connexion label {
+    display: block;
+    color: #3b4452;
+}
+
+#form_connexion input {
+    margin: 5px 0 15px;
+    width: 350px;
+    height: 35px;
+    box-shadow: 2px 2px 0 #6d1424 inset;
+}
+
+#form_connexion form>input:last-of-type {
+    background-color: #ac2546;
+    color: #fff;
+    padding-top: 3px;
+    border: none;
+}
+
+#form_connexion p {
+    color: #3b4452;
+}
+
+#form_connexion a {
+    text-decoration: none;
+    color: #ac2546;
 }
 
 
@@ -372,6 +418,7 @@ footer section:first-of-type div {
 footer li {
     text-align: left;
     color: #fff;
+    padding: 2px 0;
 }
 
 footer a:hover {
@@ -401,7 +448,7 @@ footer a {
     margin: 0 20px;
 }
 
-#footer span {
+footer span {
     color: #2278b9;
 }
 

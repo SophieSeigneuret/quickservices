@@ -1,35 +1,9 @@
 <?php
-require_once 'defines.php';
 $page_title = 'Accueil';
-?>
-<?php
+require_once 'defines.php';
 require_once 'views/page_head.php';
 require_once 'views/header.php';
 require_once 'views/aside.php';
-
-$candidats = array (
-    '1' => array(
-        'avatar' => 'images/christina.jpg',
-        'name' => 'Christina',
-        'age' => 24,
-        'city' => 'Montréal',
-        'category'  => GARDE_ENF,
-    ),
-    '2' => array(
-        'avatar' => 'images/thierry.jpg',
-        'name' => 'Thierry',
-        'age' => 29,
-        'city' => 'Laval',
-        'category'  => SOUTIEN,
-    ),
-    '3' => array(
-        'avatar' => 'images/marie.jpg',
-        'name' => 'Marie',
-        'age' => 36,
-        'city' => 'Québec',
-        'category'  => ENTRETIEN,
-    ),
-);
 
 ?>
 <main>
@@ -64,14 +38,14 @@ $candidats = array (
             <p>1 - Publiez une annonce</p>
             <p>2 - Consultez les profils des candidats</p>
             <p>3 - Contactez les candidats qui vous intéressent</p>
-            <a href="comme_ça_marche.php">En savoir plus</a>
+            <a href="comme_ca_marche.php">En savoir plus</a>
         </div>
         <div>
             <h3>Vous proposez de l'aide</h3>
             <p>1 - Inscrivez-vous</p>
             <p>2 - Démarquez-vous par un profil visible</p>
             <p>3 - Trouvez un emploi rapidement</p>
-            <a href="comme_ça_marche.php">En savoir plus</a>
+            <a href="comme_ca_marche.php">En savoir plus</a>
         </div>
     </section>
     <section id="candidats">

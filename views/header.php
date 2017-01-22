@@ -1,10 +1,6 @@
-<?php //
-//if ($page_title == 'garde_enfants') {
-//    echo 'images/picto_garde_enfants_red.gif';
-//} else {
-//    echo 'images/picto_garde_enfants.gif';
-//}
-//?>
+<?php
+require_once 'donnees.php';
+?>
 
 
 <header>
@@ -13,8 +9,8 @@
     <div id="top">
         <a href="index.php"><img id="logo" src="images/logo_provisoire.jpg" alt="logo quick services"/></a>
         <div id="connexion">
-            <a href="connexion.php">connexion</a>
-            <a href="inscription.php">inscription</a>
+            <a href="formulaire_connexion.php">connexion</a>
+            <a href="inscription.php" >inscription</a>
         </div>
     </div>
     <div id="img_accueil">
@@ -72,13 +68,24 @@
     </div>
 
     <form id="form_recherche" method="post">
+
+
+<!--        --><?php
+/*        var_dump($categories);
+
+            */?>
+
         <div>
             <label for="nounou">Je cherche </label>
             <select name="nounou" id="nounou">
-                <option value="1"></option>
-                <option value="nounou">une babysitter</option>
-                <option value="enf">des enfants à garder</option>
+                <?php foreach ($categories as $domaine => $recherche) {
+                    ?>
+                    <option value="1"><?= $recherche[0] ?></option>
+                    <option value="nounou"><?= $recherche[1] ?></option>
+                    <option value="enf"><?= $recherche[2] ?></option>
+                <?php } ?>
             </select>
+
         </div>
         <div>
             <label for="lieu">à </label>
@@ -86,4 +93,5 @@
         </div>
         <input type="submit" id="search_submit" value="Rechercher">
     </form>
+
 </header>
