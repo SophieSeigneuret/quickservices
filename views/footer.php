@@ -10,7 +10,7 @@ $annonces_cours = array('Sciences', 'Histoire - Géographie', 'Littératures - L
 
 <footer>
     <section>
-        <h2>Catégories d'annonces</h2>
+        <h2><a href="categorie.php">Catégories d'annonces</a></h2>
         <div>
             <ul>
                 <?php foreach ($annonces_garde as $metier_garde) { ?>
