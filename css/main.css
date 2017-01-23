@@ -20,9 +20,6 @@ a{
     text-decoration: none;
 }
 
-img{
-    max-width: 100%;
-}
 /*************************************************************************************************************************************/
 /*********************** VERSION DESKTOP ***********************/
 /*************************************************************************************************************************************/
@@ -74,13 +71,16 @@ body {
 }
 
 .container {
-    width: 80%;
-    margin: 0 auto;
+    /*width: 80%;
+    margin: 0 auto;*/
+    /*padding: 0 50px 0 50px;*/
+    padding: 50px;
 }
 
 main h2 {
     color: #ac2546;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 
@@ -468,15 +468,7 @@ footer span {
 
 
 
-
-
-
-
-
-
-
-
-/*********************** FORM CATEGORIE pilar ***********************/
+/* ---------------------- PAGE CATEGORIE pilar  ------------------------ */
 
 .pa_column_gouche{
     background-color: #f2f2f2;
@@ -486,19 +478,20 @@ footer span {
     /*background-color: #d9d9d9;*/
     min-height: 100px;
 }
-.pa_carte{
-    min-height: 200px;
+.pa_carte img{
+    max-width: 100%;
 }
 
 
 .pa_resultats{
     box-shadow: 0 0 5px #ddd;
     /*background-color: #e6ffff;*/
-    min-height: 100px;
+    /*min-height: 100px;*/
     margin: 0 0 10px 20px;
 }
 .photo_profil{
-    padding: 30px;
+    text-align: center;
+    margin-top: 20px;
 
 }
 .pa_info_profil .picto_accueil{
@@ -547,4 +540,83 @@ footer span {
 
 .invalid {
     background-color: #daa5a9;
+}
+
+/* ---------------------- INSCRIPTION ETAPE 1 ET 2 pilar  ------------------------ */
+
+.pa_icons_cat img{
+    width: 40%;
+}
+
+.icon_categories{
+    border: 1px solid #c0c0c0;
+    /*box-shadow: 0 0 4px rgba(0, 0, 0, .5);*/
+    height: 280px;
+    padding: 50px 10px 0 10px;
+    text-align: center;
+
+}
+.icon_categories:hover{
+    border-bottom: 7px solid #ac2546;
+
+}
+
+.pa_icons_cat h4 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #3b4452;
+    margin: 10px 0 0 0;
+}
+
+.pa_icons_cat h4:hover {
+    color: #ac2546;
+
+}
+
+.pa_icons_cat p {
+    color: #999;
+    margin: 0;
+}
+
+/* ---------------------- INSCRIPTION FORMULAIRE pilar  ------------------------ */
+#form_inscripion {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+#form_inscripion form {
+    border: 1px solid #c0c0c0;
+    padding: 20px;
+    width: 400px;
+    margin: auto;
+    border-radius: 5px;
+}
+
+#form_inscripion label {
+    display: block;
+    color: #3b4452;
+}
+
+#form_inscripion input {
+    margin: 5px 0 15px;
+    width: 350px;
+    height: 35px;
+    box-shadow: 2px 2px 0 #6d1424 inset;
+}
+
+#form_inscripion form>input:last-of-type {
+    background-color: #ac2546;
+    color: #fff;
+    padding-top: 3px;
+    border: none;
+}
+
+#form_inscripion p {
+    color: #3b4452;
+}
+
+#form_inscripion a {
+    text-decoration: none;
+    color: #ac2546;
 }
