@@ -10,7 +10,6 @@ require_once 'views/page_head.php';
     </div>
 </div>
 
-<hr/>
 <section id="detail">
     <a href="">retour</a>
     <img src="images/marie.jpg" alt="photo profil">
