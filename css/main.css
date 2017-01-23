@@ -716,7 +716,7 @@ footer span {
 
 /* ---------------------- INSCRIPTION FORMULAIRE pilar  ------------------------ */
 #form_inscripion {
-    width: 500px;
+    width: 600px;
     margin: auto;
     text-align: center;
 }
@@ -724,7 +724,6 @@ footer span {
 #form_inscripion form {
     border: 1px solid #c0c0c0;
     padding: 20px;
-    width: 400px;
     margin: auto;
     border-radius: 5px;
 }
@@ -736,7 +735,7 @@ footer span {
 
 #form_inscripion input {
     margin: 5px 0 15px;
-    width: 350px;
+    width: 500px;
     height: 35px;
     box-shadow: 2px 2px 0 #6d1424 inset;
 }
