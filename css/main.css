@@ -161,11 +161,11 @@ main h2 {
     margin: 5px 0 15px;
     width: 350px;
     height: 35px;
-    box-shadow: 2px 2px 0 #6d1424 inset;
+    box-shadow: 2px 2px 0 #2c303d inset;
 }
 
 #form_connexion form>input:last-of-type {
-    background-color: #ac2546;
+    background-color: #3b4452;
     color: #fff;
     padding-top: 3px;
     border: none;
@@ -177,6 +177,12 @@ main h2 {
 
 #form_connexion a {
     text-decoration: none;
+    color: #2278b9;
+}
+
+#msg_erreur {
+    text-align: center;
+    margin: 50px auto;
     color: #ac2546;
 }
 
