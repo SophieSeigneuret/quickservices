@@ -1,4 +1,4 @@
-<?php
+ <?php
 require_once 'defines.php';
 $page_title = 'inscription etape 1';
 ?>
