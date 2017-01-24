@@ -9,15 +9,13 @@ require_once 'views/aside.php';
 ?>
 <main>
     <?php
-    require_once 'views/pa_page_main_categorie.php';
+    require_once 'views/page_main_categorie.php';
     ?>
-
 </main>
 <?php
 require_once 'views/footer.php';
 require_once 'views/javascript.php';
 ?>
-</body>
 </html>
 
 
