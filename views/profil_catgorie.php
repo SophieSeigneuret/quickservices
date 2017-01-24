@@ -23,7 +23,7 @@
                 </div>
                 <p>On vient de déménager et j'ai pu trouver en une demi-journée unesuper femme de ménage,
                     Marta. Elle a même pu m'aider pour vider les boîtes, c'est vraiment bien.</p><br>
-                <p><a href="#"><span>En savoir plus...</span></a></p>
+                <p><a href="detail.php"><span>En savoir plus...</span></a></p>
             </div>
         </div>
     </div>

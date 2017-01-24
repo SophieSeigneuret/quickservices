@@ -6,7 +6,9 @@ require_once 'views/header.php';
 require_once 'views/aside.php';
 ?>
 <main>
-    <h2>Ceci est le main de la page garde d'enfants</h2>
+    <?php
+    require_once 'views/pa_page_main_categorie.php';
+    ?>
 </main>
 <?php
 require_once 'views/footer.php';
