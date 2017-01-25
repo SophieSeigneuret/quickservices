@@ -3,7 +3,6 @@ $page_title = 'Accueil';
 require_once 'defines.php';
 require_once 'views/page_head.php';
 require_once 'views/header.php';
-require_once 'views/aside.php';
 
 ?>
 <main>
@@ -38,14 +37,14 @@ require_once 'views/aside.php';
             <p>1 - Publiez une annonce</p>
             <p>2 - Consultez les profils des candidats</p>
             <p>3 - Contactez les candidats qui vous intéressent</p>
-            <a href="comme_ca_marche.php">En savoir plus</a>
+            <a href="#">En savoir plus</a>
         </div>
         <div>
             <h3>Vous proposez de l'aide</h3>
             <p>1 - Inscrivez-vous</p>
             <p>2 - Démarquez-vous par un profil visible</p>
             <p>3 - Trouvez un emploi rapidement</p>
-            <a href="comme_ca_marche.php">En savoir plus</a>
+            <a href="#">En savoir plus</a>
         </div>
     </section>
     <section id="candidats">

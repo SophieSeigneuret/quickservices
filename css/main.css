@@ -488,7 +488,7 @@ nav {
     height: 110px;
 }
 
-#me_contacter a:first-of-type {
+#me_contacter p {
     display: block;
     color: #fff;
     text-decoration: none;
@@ -504,7 +504,7 @@ nav {
     text-align: center;
 }
 
-#me_contacter>a:nth-of-type(2) img {
+#me_contacter>a:first-of-type img {
     margin: 15px 20px 0 46px;
 }
 

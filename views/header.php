@@ -1,5 +1,7 @@
 <?php
+session_start();
 require_once 'donnees.php';
+var_dump($_SESSION);
 ?>
 
 
@@ -7,7 +9,11 @@ require_once 'donnees.php';
     <div id="top">
         <a href="index.php"><img id="logo" src="images/logo_provisoire.jpg" alt="logo quick services"/></a>
         <div id="connexion">
-            <a href="formulaire_connexion.php">connexion</a>
+            <?php if(!empty($_SESSION['mail'])) { ?>
+                <a href="#">mon compte</a>
+            <?php } else { ?>
+                <a href="formulaire_connexion.php">connexion</a>
+            <?php } ?>
             <a href="inscription.php" >inscription</a>
         </div>
     </div>

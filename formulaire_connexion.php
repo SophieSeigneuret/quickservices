@@ -1,9 +1,13 @@
 <?php
+session_start();
+session_unset();
+
 $page_title = 'formulaire connection';
 require_once 'donnees.php';
 
 //var_dump($_POST);
 //var_dump($is_logged_in);
+//var_dump($_SESSION);
 
 $is_logged_in = false; // Indique l'état de connexion / déconnexion de l'utilisateur
 
@@ -41,6 +45,8 @@ if (!$is_logged_in
     // connexion
     if ($username_valide && $password_valide && user_authenticated($username, $password)) {
         $is_logged_in = true;
+        //
+        $_SESSION['mail'] = $username;
         header('location:index.php');
         exit;
     }
