@@ -624,7 +624,6 @@ footer span {
     max-width: 100%;
 }
 
-
 .pa_resultats{
     box-shadow: 0 0 5px #ddd;
     /*background-color: #e6ffff;*/
@@ -692,7 +691,6 @@ footer span {
 
 .icon_categories{
     border: 1px solid #c0c0c0;
-    /*box-shadow: 0 0 4px rgba(0, 0, 0, .5);*/
     height: 280px;
     padding: 50px 10px 0 10px;
     text-align: center;
@@ -700,7 +698,6 @@ footer span {
 }
 .icon_categories:hover{
     border-bottom: 7px solid #ac2546;
-
 }
 
 .pa_icons_cat h4 {
@@ -727,6 +724,10 @@ footer span {
     text-align: center;
 }
 
+#form_inscripion span {
+    color: #ac2546;
+}
+
 #form_inscripion form {
     border: 1px solid #c0c0c0;
     padding: 20px;
@@ -738,26 +739,52 @@ footer span {
     display: block;
     color: #3b4452;
 }
+#form_inscripion select#horaire {
+    width: 200px;
+    border: 1px solid #999;
+    height: 30px;
+    margin: 10px 0 10px 0;
+    text-align: left;
+}
+
+#form_inscripion .calendrier{
+    width: 200px;
+}
+
+#form_inscripion select#horaire, .calendrier{
+    display: inline-block;
+    vertical-align: top;
+}
 
 #form_inscripion input {
     margin: 5px 0 15px;
     width: 500px;
     height: 35px;
-    box-shadow: 2px 2px 0 #6d1424 inset;
 }
-
-#form_inscripion form>input:last-of-type {
-    background-color: #ac2546;
-    color: #fff;
-    padding-top: 3px;
-    border: none;
+#form_inscripion textarea {
+    margin-top: 10px;
 }
-
 #form_inscripion p {
+    color: #ac2546;
+    font-size: 0.9rem;
+}
+
+#form_inscripion p span {
     color: #3b4452;
+
 }
 
 #form_inscripion a {
     text-decoration: none;
     color: #ac2546;
+}
+
+#form_inscripion input[type="submit"] {
+    background-color: #3b4452;
+    border: none;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+#form_inscripion input[type="submit"]:hover {
+    background-color: #ac2546;
 }
