@@ -24,7 +24,9 @@ $candidats = array (
     ),
 );
 
+
 require_once 'defines.php';
+
 
 $categories = array (
     GARDE_ENF => array(
@@ -45,9 +47,6 @@ $categories = array (
 );
 
 
-if ($page_title == 'garde_enfants') {
-
-}
 
 
 $users = array(

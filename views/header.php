@@ -1,22 +1,12 @@
 <?php
-session_start();
-require_once 'donnees.php';
-var_dump($_SESSION);
+//var_dump($page_title);
+
 ?>
 
-
 <header>
-    <div id="top">
-        <a href="index.php"><img id="logo" src="images/logo_provisoire.jpg" alt="logo quick services"/></a>
-        <div id="connexion">
-            <?php if(!empty($_SESSION['mail'])) { ?>
-                <a href="#">mon compte</a>
-            <?php } else { ?>
-                <a href="formulaire_connexion.php">connexion</a>
-            <?php } ?>
-            <a href="inscription.php" >inscription</a>
-        </div>
-    </div>
+    <!-- logo + connexion/inscription ou mon compte / deconnexion -->
+    <?php require_once 'top_header.php'; ?>
+    <!-- image de fond qui change selon la section -->
     <div id="img_accueil">
         <img src="<?php if ($page_title == 'Accueil') {
             echo 'images/fond_accueil.jpg';
@@ -28,7 +18,9 @@ var_dump($_SESSION);
             echo 'images/fond_soutien_scolaire.jpg';
         } ?>" alt="image de fond"/>
         <h1>Trouvez de l'aide. Proposez vos services</h1>
+        <!-- menu -->
         <?php require_once 'menu.php'; ?>
     </div>
+    <!-- formulaire de recherche rapide -->
     <?php require_once 'form_recherche.php'; ?>
 </header>

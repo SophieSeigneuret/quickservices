@@ -8,4 +8,4 @@ define('GARDE_ENF', 'Garde d\'enfants');
 define('SOUTIEN', 'Soutien scolaire');
 define('ENTRETIEN', 'Entretien - Bricolage');
 define('INSCRIPTION', 'formulaire inscription');
-
+define('PS_MAIL', 'ps_mail');  //parametre de session mail
