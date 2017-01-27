@@ -31,3 +31,5 @@ if (champ_datepicker.val().trim().length < MIN_NB_CAR) {
     champ_datepicker.removeClass("error");
     img_calendrier.next(".error_msg").remove();
 }
+
+
