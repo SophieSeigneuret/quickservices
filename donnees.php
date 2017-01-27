@@ -1,4 +1,6 @@
 <?php
+//require_once 'defines.php';
+
 
 $candidats = array (
     '1' => array(
@@ -25,26 +27,44 @@ $candidats = array (
 );
 
 
-require_once 'defines.php';
+$recherche = array(
+    DEMANDE,
+    OFFRE,
+);
 
 
-$categories = array (
-    GARDE_ENF => array(
-        '---',
-        'une babysitter',
-        'des enfants à garder',
+$options_OD = array(
+    GARDE_ENF => array (
+        DEMANDE => 'une babysitter',
+        OFFRE => 'des enfants à garder',
     ),
-    ENTRETIEN => array(
-        '---',
-        'une aide à domicile',
-        'des travaux à faire',
+    ENTRETIEN => array (
+        DEMANDE => 'une aide à domicile',
+        OFFRE => 'des travaux à faire',
     ),
-    SOUTIEN => array(
-        '---',
-        'un cours particulier',
-        'des élèves',
+    SOUTIEN => array (
+        DEMANDE => 'un cours particulier',
+        OFFRE => 'des élèves',
     ),
 );
+
+//$categories = array (
+//    GARDE_ENF => array(
+//        'Garde enfants',
+//        'une babysitter',
+//        'des enfants à garder',
+//    ),
+//    ENTRETIEN => array(
+//        'Entretien / Bricolage',
+//        'une aide à domicile',
+//        'des travaux à faire',
+//    ),
+//    SOUTIEN => array(
+//        'Soutien scolaire',
+//        'un cours particulier',
+//        'des élèves',
+//    ),
+//);
 
 
 

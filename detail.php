@@ -1,15 +1,8 @@
 <?php
 session_start();
 require_once 'views/page_head.php';
+require_once 'views/top_header.php';
 ?>
-
-<div id="top">
-    <a href="index.php"><img id="logo" src="images/logo_provisoire.jpg" alt="logo quick services"/></a>
-    <div id="connexion">
-        <a href="formulaire_connexion.php">connexion</a>
-        <a href="inscription.php">inscription</a>
-    </div>
-</div>
 
 <section id="detail">
     <a href="">retour</a>

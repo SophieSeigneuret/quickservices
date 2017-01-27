@@ -100,6 +100,10 @@ main h2 {
     vertical-align: bottom;
 }
 
+#connexion a, #connexion form {
+    display: inline-block;
+}
+
 #top>a {
     position: absolute;
     left: 20px;
@@ -134,6 +138,13 @@ main h2 {
 #connexion a:last-of-type {
     border: 1px solid #2278b9;
 }
+
+#connexion form input {
+    border: 1px solid #ac2546;
+    height: 29px;
+    width: 200px;
+}
+
 
 /* --------------------------------------------- */
 /* FORMULAIRE CONNEXION */
@@ -185,6 +196,9 @@ main h2 {
     margin: 50px auto;
     color: #ac2546;
 }
+
+
+
 
 
 /* --------------------------------------------- */
@@ -419,11 +433,6 @@ nav {
 
 
 /*********************** PAGE DÉTAIL ***********************/
-
-/*hr {*/
-    /*margin: 0;*/
-    /*color: #c0c0c0;*/
-/*}*/
 
 #detail {
     border-top: 1px solid #c0c0c0;

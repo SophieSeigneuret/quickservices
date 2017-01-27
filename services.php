@@ -1,5 +1,5 @@
 <?php
-$page_title = 'garde_enfants';
+// $page_title = 'soutien_scolaire';
 require_once 'defines.php';
 require_once 'views/page_head.php';
 require_once 'views/header.php';

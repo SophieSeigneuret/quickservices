@@ -10,11 +10,11 @@
     <div id="img_accueil">
         <img src="<?php if ($page_title == 'Accueil') {
             echo 'images/fond_accueil.jpg';
-        } else if ($page_title == 'garde_enfants') {
+        } else if (array_key_exists(GARDE_ENF, $_GET)) {
             echo 'images/fond_garde_enfants.jpg';
-        } else if ($page_title == 'bricolage') {
+        } else if (array_key_exists(ENTRETIEN, $_GET)) {
             echo 'images/fond_entretien.jpg';
-        } else if ($page_title == 'soutien_scolaire') {
+        } else if (array_key_exists(SOUTIEN, $_GET)) {
             echo 'images/fond_soutien_scolaire.jpg';
         } ?>" alt="image de fond"/>
         <h1>Trouvez de l'aide. Proposez vos services</h1>
