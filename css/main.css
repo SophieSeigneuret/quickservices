@@ -100,6 +100,10 @@ main h2 {
     vertical-align: bottom;
 }
 
+#connexion a, #connexion form {
+    display: inline-block;
+}
+
 #top>a {
     position: absolute;
     left: 20px;
@@ -134,6 +138,13 @@ main h2 {
 #connexion a:last-of-type {
     border: 1px solid #2278b9;
 }
+
+#connexion form input {
+    border: 1px solid #ac2546;
+    height: 29px;
+    width: 200px;
+}
+
 
 /* --------------------------------------------- */
 /* FORMULAIRE CONNEXION */
@@ -185,6 +196,9 @@ main h2 {
     margin: 50px auto;
     color: #ac2546;
 }
+
+
+
 
 
 /* --------------------------------------------- */
@@ -420,11 +434,6 @@ nav {
 
 /*********************** PAGE DÉTAIL ***********************/
 
-/*hr {*/
-    /*margin: 0;*/
-    /*color: #c0c0c0;*/
-/*}*/
-
 #detail {
     border-top: 1px solid #c0c0c0;
     padding: 50px 0;
@@ -488,7 +497,7 @@ nav {
     height: 110px;
 }
 
-#me_contacter a:first-of-type {
+#me_contacter p {
     display: block;
     color: #fff;
     text-decoration: none;
@@ -504,7 +513,7 @@ nav {
     text-align: center;
 }
 
-#me_contacter>a:nth-of-type(2) img {
+#me_contacter>a:first-of-type img {
     margin: 15px 20px 0 46px;
 }
 
@@ -620,15 +629,25 @@ footer span {
     /*background-color: #d9d9d9;*/
     min-height: 100px;
 }
-.pa_carte img{
+.pa_carte .carte{
     max-width: 100%;
 }
+iframe {
+    width: 100%;
+}
+
 
 .pa_resultats{
     box-shadow: 0 0 5px #ddd;
     /*background-color: #e6ffff;*/
     /*min-height: 100px;*/
     margin: 0 0 10px 20px;
+}
+
+.pa_resultats hr{
+
+    height:1px;
+    background-color:#dddddd;
 }
 .photo_profil{
     text-align: center;
@@ -660,7 +679,7 @@ footer span {
 }
 .pa_info_profil p span{
     font-size: 0.8rem;
-    color: #ff5e2d;
+    color: #ac2546;
 }
 /*form*/
 
