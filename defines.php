@@ -2,6 +2,7 @@
 /**
  * Definition des constantes principales du site
  */
+
 define('NOM_SITE', 'quick_services');
 define('ACCUEIL', 'accueil');
 define('GARDE_ENF', 'garde_enfants');

@@ -2,12 +2,9 @@
 session_start();
 //session_unset();
 //session_destroy();
-
 require_once 'donnees.php';
 require_once 'defines.php';
-
 //var_dump($_SESSION);
-
 // verifie si le username et le password correspondent à un utilisateur valide
 function user_authenticated($username, $password) {
     global $users;
@@ -22,22 +19,18 @@ function user_authenticated($username, $password) {
     }
     return $result;
 };
-
 // utilisateur connecté si la donnée de session username n'est pas vide
 function is_logged_in() {
     return (array_key_exists(PS_MAIL, $_SESSION) && (!empty($_SESSION[PS_MAIL])));
 }
-
+$username = '';
+$username_valide = true;
+$password = '';
+$password_valide = true;
 // reception des données du formulaire de connexion
 if (is_logged_in() && array_key_exists('deconnect', $_POST)) {
     $_SESSION = array(); // deconnexion
-   // session_unset();
     session_destroy();
-//    unset($_SESSION[PS_MAIL]);
-//    unset($_COOKIE[session_name()]);
-//    setcookie(session_name(), "", 1, "/");
-//    session_destroy();
-
 } else if (! is_logged_in()
     && array_key_exists('mail', $_POST)
     && array_key_exists('password', $_POST)
@@ -56,13 +49,3 @@ if (is_logged_in() && array_key_exists('deconnect', $_POST)) {
         exit;
     }
 }
-
-
-
-
-
-//$username = '';
-//$username_valide = true;
-//$password = '';
-//$password_valide = true;
-
