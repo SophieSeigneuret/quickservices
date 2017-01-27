@@ -19,5 +19,3 @@ $services = array (
     ENTRETIEN,
     SOUTIEN,
 );
-
-
