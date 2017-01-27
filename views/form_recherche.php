@@ -1,12 +1,13 @@
 <form id="form_recherche" method="post">
     <div>
-        <label for="nounou">Je cherche </label>
-        <select name="nounou" id="nounou">
-            <?php foreach ($categories as $domaine => $recherche) {
-                ?>
-                <option value="1"><?= $recherche[0] ?></option>
-                <option value="nounou"><?= $recherche[1] ?></option>
-                <option value="enf"><?= $recherche[2] ?></option>
+        <label for="rapid_search">Je cherche </label>
+        <select name="rapid_search" id="rapid_search">
+            <?php foreach ($options_OD as $domaine => $recherche) { ?>
+                <optgroup label="<?= $domaine ?>">
+                    <?php foreach ($recherche as $od => $service_string) { ?>
+                        <option value="<?= $od ?>"><?= $service_string ?></option>
+                    <?php } ?>
+                </optgroup>
             <?php } ?>
         </select>
 

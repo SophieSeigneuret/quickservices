@@ -1,14 +1,8 @@
 <?php
+session_start();
 require_once 'views/page_head.php';
+require_once 'views/top_header.php';
 ?>
-
-<div id="top">
-    <a href="index.php"><img id="logo" src="images/logo_provisoire.jpg" alt="logo quick services"/></a>
-    <div id="connexion">
-        <a href="formulaire_connexion.php">connexion</a>
-        <a href="inscription.php">inscription</a>
-    </div>
-</div>
 
 <section id="detail">
     <a href="">retour</a>
@@ -22,7 +16,7 @@ require_once 'views/page_head.php';
         <p>Dernière connexion il y a 5 jours</p>
     </div>
     <div id="me_contacter">
-        <a href="contact.php">Me contacter</a>
+        <p>Me contacter</p>
         <a href=""><img src="images/picto_tel.png" alt="picto téléphone"></a>
         <a href=""><img src="images/picto_enveloppe.png" alt="picto enveloppe"></a>
     </div>
