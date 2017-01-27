@@ -1,9 +1,8 @@
 <?php
-$page_title = 'Accueil';
 require_once 'defines.php';
 require_once 'views/page_head.php';
 require_once 'views/header.php';
-
+$page_title = ACCUEIL;
 ?>
 <main>
     <section id="avantages">
