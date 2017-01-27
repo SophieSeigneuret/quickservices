@@ -28,7 +28,7 @@ $item_valide = true;
 
 <form id="formulaire" action="<?= basename(__FILE__) ?>" method="post">
     <h3>Recherche avancée</h3>
-    <h4>Tipe de garde</h4>
+    <h4>Type service</h4>
 
     <!-- items-->
     <div class="<?= $item_valide ? '' : 'invalid' ?>">
@@ -46,14 +46,9 @@ $item_valide = true;
     <div class="<?= $item_valide ? '' : 'invalid' ?>">
         <input type="checkbox" id="item_tout" name="items[]" value="item_tout"
             <?= array_key_exists('items', $_POST) && in_array('item_tout', $_POST['items']) ? ' checked="checked"': ''?> />
-        <label for="item_tout">régulière</label>
+        <label for="item_tout">Régulier</label>
     </div>
 
-    <div class="<?= $item_valide ? '' : 'invalid' ?>">
-        <input type="checkbox" id="item_tout" name="items[]" value="item_tout"
-            <?= array_key_exists('items', $_POST) && in_array('item_tout', $_POST['items']) ? ' checked="checked"': ''?> />
-        <label for="item_tout">Au pair</label>
-    </div>
 
     <div class="<?= $item_valide ? '' : 'invalid' ?>">
         <input type="checkbox" id="item_tout" name="items[]" value="item_tout"
@@ -86,13 +81,19 @@ $item_valide = true;
         <label for="item_tout">Chinois</label>
     </div>
 
+    <div class="<?= $item_valide ? '' : 'invalid' ?>">
+        <input type="checkbox" id="item_tout" name="items[]" value="item_tout"
+            <?= array_key_exists('items', $_POST) && in_array('item_tout', $_POST['items']) ? ' checked="checked"': ''?> />
+        <label for="item_tout">Autre</label>
+    </div>
+
 
     <h4>Transport</h4>
 
     <div class="<?= $item_valide ? '' : 'invalid' ?>">
         <input type="checkbox" id="item_tout" name="items[]" value="item_tout"
             <?= array_key_exists('items', $_POST) && in_array('item_tout', $_POST['items']) ? ' checked="checked"': ''?> />
-        <label for="item_tout">À la personne</label>
+        <label for="item_tout">A son permis</label>
     </div>
 
     <div class="<?= $item_valide ? '' : 'invalid' ?>">
