@@ -28,16 +28,15 @@ function is_logged_in() {
     return (array_key_exists(PS_MAIL, $_SESSION) && (!empty($_SESSION[PS_MAIL])));
 }
 
+$username = '';
+$username_valide = true;
+$password = '';
+$password_valide = true;
+
 // reception des données du formulaire de connexion
 if (is_logged_in() && array_key_exists('deconnect', $_POST)) {
     $_SESSION = array(); // deconnexion
-   // session_unset();
     session_destroy();
-//    unset($_SESSION[PS_MAIL]);
-//    unset($_COOKIE[session_name()]);
-//    setcookie(session_name(), "", 1, "/");
-//    session_destroy();
-
 } else if (! is_logged_in()
     && array_key_exists('mail', $_POST)
     && array_key_exists('password', $_POST)
@@ -61,8 +60,5 @@ if (is_logged_in() && array_key_exists('deconnect', $_POST)) {
 
 
 
-//$username = '';
-//$username_valide = true;
-//$password = '';
-//$password_valide = true;
+
 
