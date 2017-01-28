@@ -6,10 +6,9 @@ require_once 'db/db_access.php';
 
 $page_title = ACCUEIL;
 
-define('ARTICLE_IMG_PATH', 'images/uploads_img/');
+$last_3users = get_last_3users();
 
-$user = get_users();
-//var_dump($user);
+//var_dump($last_3users);
 
 ?>
 <main>
@@ -56,23 +55,23 @@ $user = get_users();
     </section>
     <section id="candidats">
         <h2>Les derniers candidats inscrits</h2>
-        <?php foreach ($user as $info) { ?>
+        <?php foreach ($last_3users as $info) { ?>
             <div>
                 <a href="#"><img src="<?= ARTICLE_IMG_PATH . $info['photo'] ?>" alt="photo <?= $info['nom'] ?>"></a>
                 <a href="#"><h3><?= $info['nom'] ?></h3></a>
                 <p><?= $info['age'] ?> ans</p>
                 <p><?= $info['ville'] ?></p>
-                <a href="<?php switch ($info['category']) {
-                    case GARDE_ENF :
-                        echo "garde_enfants.php";
+                <a href="<?php switch ($info['service_1']) {
+                    case 'garde' :
+                        echo "services.php?garde_enfants";
                         break;
-                    case SOUTIEN :
-                        echo "soutien_scolaire.php";
+                    case 'soutien' :
+                        echo "services.php?soutien_scolaire";
                         break;
-                    case ENTRETIEN :
-                        echo "bricolage_entretien.php";
+                    case 'entretien' :
+                        echo "services.php?entretien_bricolage";
                         break;
-                } ?>"><h5><?= $info['service 1'] ?></h5></a>
+                } ?>"><h5><?= $info['service_1'] ?></h5></a>
             </div>
         <?php } ?>
     </section>

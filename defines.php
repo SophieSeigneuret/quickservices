@@ -12,7 +12,7 @@ define('INSCRIPTION', 'formulaire inscription');
 define('PS_MAIL', 'ps_mail');  //parametre de session mail
 define('OFFRE', 'offre');
 define('DEMANDE', 'demande');
-
+define('ARTICLE_IMG_PATH', 'images/uploads_img/');
 
 $services = array (
     GARDE_ENF,

@@ -61,3 +61,20 @@ function get_users() {
 
 
 
+function get_last_3users() {
+    global $mysqli;
+    // Rédaction de la requete sur les users
+    $query_str = 'SELECT * FROM `users` ORDER BY `date_entree` DESC LIMIT 0, 3'; // Sélection des 3 derniers users
+
+    $res = $mysqli->query($query_str); // xécution de la requête
+
+    // Chargement des données, ligne par ligne (boucle while)
+    $data = array();
+    if ($res && ($res->num_rows > 0)) {
+        while ($users = $res->fetch_assoc()) {
+            $data[$users['id']] = $users;
+        }
+    }
+    //var_dump($data);
+    return $data;
+}
