@@ -1,3 +1,11 @@
+<?php
+
+//if ($_POST['rapid_search'] == 'une babysitter') {
+//    header('Location:services.php?garde_enfants');
+//}
+?>
+
+
 <form id="form_recherche" method="post">
     <div>
         <label for="rapid_search">Je cherche </label>
@@ -29,5 +37,5 @@
         <label for="lieu">à </label>
         <input type="text" placeholder="adresse, ville, CP" id="lieu" value=""/>
     </div>
-    <input type="submit" id="search_submit" value="Rechercher">
+    <input type="submit" name="search" id="search_submit" value="Rechercher">
 </form>
