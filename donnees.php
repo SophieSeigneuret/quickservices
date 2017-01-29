@@ -48,58 +48,40 @@ $options_OD = array(
     ),
 );
 
-//$categories = array (
-//    GARDE_ENF => array(
-//        'Garde enfants',
-//        'une babysitter',
-//        'des enfants à garder',
+
+
+
+//$users = array(
+//    45 => array(
+//        'mail' => 'steve@gmail.com',
+//        'password' => md5('toto17'),
 //    ),
-//    ENTRETIEN => array(
-//        'Entretien / Bricolage',
-//        'une aide à domicile',
-//        'des travaux à faire',
+//    22 => array(
+//        'mail' => 'yassine@gmail.com',
+//        'password' => md5('fido123'),
 //    ),
-//    SOUTIEN => array(
-//        'Soutien scolaire',
-//        'un cours particulier',
-//        'des élèves',
+//    11 => array(
+//        'mail' => 'mamadou@gmail.com',
+//        'password' => md5('tata78'),
+//    ),
+//    15 => array(
+//        'mail' => 'sophie@gmail.com',
+//        'password' => md5('123456'),
+//    ),
+//    98 => array(
+//        'mail' => 'willy@gmail.com',
+//        'password' => md5('rouge1'),
+//    ),
+//    66 => array(
+//        'mail' => 'abderraouf@gmail.com',
+//        'password' => md5('shakino123'),
+//    ),
+//    54 => array(
+//        'mail' => 'ismahen@gmail.com',
+//        'password' => md5('pink17'),
+//    ),
+//    38 => array(
+//        'mail' => 'amin@gmail.com',
+//        'password' => md5('marroon8'),
 //    ),
 //);
-
-
-
-
-$users = array(
-    45 => array(
-        'mail' => 'steve@gmail.com',
-        'password' => md5('toto17'),
-    ),
-    22 => array(
-        'mail' => 'yassine@gmail.com',
-        'password' => md5('fido123'),
-    ),
-    11 => array(
-        'mail' => 'mamadou@gmail.com',
-        'password' => md5('tata78'),
-    ),
-    15 => array(
-        'mail' => 'sophie@gmail.com',
-        'password' => md5('123456'),
-    ),
-    98 => array(
-        'mail' => 'willy@gmail.com',
-        'password' => md5('rouge1'),
-    ),
-    66 => array(
-        'mail' => 'abderraouf@gmail.com',
-        'password' => md5('shakino123'),
-    ),
-    54 => array(
-        'mail' => 'ismahen@gmail.com',
-        'password' => md5('pink17'),
-    ),
-    38 => array(
-        'mail' => 'amin@gmail.com',
-        'password' => md5('marroon8'),
-    ),
-);

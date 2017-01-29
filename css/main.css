@@ -218,10 +218,29 @@ main h2 {
     margin: auto;
     text-align: center;
     width: 100%;
-    color: #2278b9;
-    text-shadow: 2px 2px 0 #fff;
+    /*color: #ac2546;*/
+    /*text-shadow: 2px 2px 0 #fff;*/
 }
 
+.header_garde h1 {
+    color: #2278b9;
+    text-shadow: 2px 2px 0 #ffffff;
+}
+
+.header_entretien {
+    color: #3b4452;
+    text-shadow: 2px 2px 0 #ffffff;
+}
+
+.header_soutien h1 {
+    color: #fff;
+    text-shadow: 2px 2px 0 #2c303d;
+}
+
+.header_accueil h1 {
+    color: #ac2546;
+    text-shadow: 2px 2px 0 #ffffff;
+}
 
 /* --------------------------------------------- */
 /* NAV */
@@ -492,7 +511,7 @@ nav {
 }
 
 #me_contacter {
-    background-color: #ac2546;
+    background-color: #3b4452;
     width: 200px;
     height: 110px;
 }
@@ -508,16 +527,41 @@ nav {
     margin: 0 30px;
 }
 
+#me_contacter button, #me_contacter a {
+    display: inline-block;
+    width: 94px;
+}
+
 #me_contacter img {
     height: 40px;
     text-align: center;
 }
 
-#me_contacter>a:first-of-type img {
-    margin: 15px 20px 0 46px;
+#me_contacter button {
+    background-color: #3b4452;
+    border: none;
 }
 
-#me_contacter>a:last-of-type img {
+#me_contacter>button img {
+    margin: 15px 20px 0 35px;
+}
+
+.ui-widget-header {
+    background: #2278b9 none repeat scroll 0 0;
+}
+
+.ui-widget-header {
+    color: #fff;
+}
+
+#dialog p, #dialog a {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#me_contacter>a img {
     margin: 15px 46px 0 20px;
 }
 

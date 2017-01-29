@@ -2,8 +2,13 @@
 require_once 'defines.php';
 require_once 'views/page_head.php';
 require_once 'views/header.php';
+require_once 'db/db_access.php';
 
 $page_title = ACCUEIL;
+
+$last_3users = get_last_3users();
+
+//var_dump($last_3users);
 
 ?>
 <main>
@@ -50,26 +55,48 @@ $page_title = ACCUEIL;
     </section>
     <section id="candidats">
         <h2>Les derniers candidats inscrits</h2>
-        <?php foreach ($candidats as $key => $infos) { ?>
+        <?php foreach ($last_3users as $info) { ?>
             <div>
-                <a href="#"><img src="<?= $infos['avatar'] ?>" alt="photo Thierry"></a>
-                <a href="#"><h3><?= $infos['name'] ?></h3></a>
-                <p><?= $infos['age'] ?> ans</p>
-                <p><?= $infos['city'] ?></p>
-                <a href="<?php switch ($infos['category']) {
-                    case GARDE_ENF :
-                        echo "garde_enfants.php";
+                <a href="#"><img src="<?= ARTICLE_IMG_PATH . $info['photo'] ?>" alt="photo <?= $info['nom'] ?>"></a>
+                <a href="#"><h3><?= $info['nom'] ?></h3></a>
+                <p><?= $info['age'] ?> ans</p>
+                <p><?= $info['ville'] ?></p>
+                <a href="<?php switch ($info['service_1']) {
+                    case 'garde' :
+                        echo "services.php?garde_enfants";
                         break;
-                    case SOUTIEN :
-                        echo "soutien_scolaire.php";
+                    case 'soutien' :
+                        echo "services.php?soutien_scolaire";
                         break;
-                    case ENTRETIEN :
-                        echo "bricolage_entretien.php";
+                    case 'entretien' :
+                        echo "services.php?entretien_bricolage";
                         break;
-                } ?>"><h5><?= $infos['category'] ?></h5></a>
+                } ?>"><h5><?= $info['service_1'] ?></h5></a>
             </div>
         <?php } ?>
     </section>
+<!--    <section id="candidats">-->
+<!--        <h2>Les derniers candidats inscrits</h2>-->
+<!--        --><?php //foreach ($candidats as $key => $infos) { ?>
+<!--            <div>-->
+<!--                <a href="#"><img src="--><?//= $infos['avatar'] ?><!--" alt="photo Thierry"></a>-->
+<!--                <a href="#"><h3>--><?//= $infos['name'] ?><!--</h3></a>-->
+<!--                <p>--><?//= $infos['age'] ?><!-- ans</p>-->
+<!--                <p>--><?//= $infos['city'] ?><!--</p>-->
+<!--                <a href="--><?php //switch ($infos['category']) {
+//                    case GARDE_ENF :
+//                        echo "garde_enfants.php";
+//                        break;
+//                    case SOUTIEN :
+//                        echo "soutien_scolaire.php";
+//                        break;
+//                    case ENTRETIEN :
+//                        echo "bricolage_entretien.php";
+//                        break;
+//                } ?><!--"><h5>--><?//= $infos['category'] ?><!--</h5></a>-->
+<!--            </div>-->
+<!--        --><?php //} ?>
+<!--    </section>-->
 </main>
 <?php
 require_once 'views/footer.php';

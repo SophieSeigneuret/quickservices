@@ -1,11 +1,13 @@
 <?php
-session_start();
+//session_start();
+
+require_once 'defines.php';
 require_once 'views/page_head.php';
 require_once 'views/top_header.php';
+//var_dump($_SERVER['HTTP_REFERER']);
 ?>
-
 <section id="detail">
-    <a href="">retour</a>
+    <a href="<?= ! empty($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'index.php' ?>">retour</a>
     <img src="images/marie.jpg" alt="photo profil">
     <div id="cv">
         <h2>Marie</h2>
@@ -17,8 +19,12 @@ require_once 'views/top_header.php';
     </div>
     <div id="me_contacter">
         <p>Me contacter</p>
-        <a href=""><img src="images/picto_tel.png" alt="picto téléphone"></a>
-        <a href=""><img src="images/picto_enveloppe.png" alt="picto enveloppe"></a>
+        <div id="dialog" title="Contactez Marie">
+            <p>(514) 123-4567</p>
+            <a href="mailto:someone@example.com">marie@gmail.com</a>
+        </div>
+        <button id="opener"><img src="images/picto_tel.png" alt="picto téléphone"></button>
+        <a href="mailto:someone@example.com"><img src="images/picto_enveloppe.png" alt="picto enveloppe"></a>
     </div>
     <div id="encadre">
         <h3>Services offerts</h3>
@@ -48,3 +54,7 @@ require_once 'views/top_header.php';
         <a href="#">Ecrire une recommandation</a>
     </div>
 </section>
+<?php
+require_once 'views/javascript.php';
+?>
+</html>
