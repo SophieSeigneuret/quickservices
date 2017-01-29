@@ -2,29 +2,29 @@
 //require_once 'defines.php';
 
 
-$candidats = array (
-    '1' => array(
-        'avatar' => 'images/christina.jpg',
-        'name' => 'Christina',
-        'age' => 24,
-        'city' => 'Montréal',
-        'category'  => GARDE_ENF,
-    ),
-    '2' => array(
-        'avatar' => 'images/thierry.jpg',
-        'name' => 'Thierry',
-        'age' => 29,
-        'city' => 'Laval',
-        'category'  => SOUTIEN,
-    ),
-    '3' => array(
-        'avatar' => 'images/marie.jpg',
-        'name' => 'Marie',
-        'age' => 36,
-        'city' => 'Québec',
-        'category'  => ENTRETIEN,
-    ),
-);
+//$candidats = array (
+//    '1' => array(
+//        'avatar' => 'images/christina.jpg',
+//        'name' => 'Christina',
+//        'age' => 24,
+//        'city' => 'Montréal',
+//        'category'  => GARDE_ENF,
+//    ),
+//    '2' => array(
+//        'avatar' => 'images/thierry.jpg',
+//        'name' => 'Thierry',
+//        'age' => 29,
+//        'city' => 'Laval',
+//        'category'  => SOUTIEN,
+//    ),
+//    '3' => array(
+//        'avatar' => 'images/marie.jpg',
+//        'name' => 'Marie',
+//        'age' => 36,
+//        'city' => 'Québec',
+//        'category'  => ENTRETIEN,
+//    ),
+//);
 
 
 $recherche = array(

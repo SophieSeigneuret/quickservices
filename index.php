@@ -57,9 +57,9 @@ $last_3users = get_last_3users();
         <h2>Les derniers candidats inscrits</h2>
         <?php foreach ($last_3users as $info) { ?>
             <div>
-                <a href="#"><img src="<?= ARTICLE_IMG_PATH . $info['photo'] ?>" alt="photo <?= $info['nom'] ?>"></a>
-                <a href="#"><h3><?= $info['nom'] ?></h3></a>
-                <p><?= $info['age'] ?> ans</p>
+                <a href="detail.php?id=<?= $info['id'] ?>"><img src="<?= ARTICLE_IMG_PATH . $info['photo'] ?>" alt="photo <?= $info['nom'] ?>"></a>
+                <a href="detail.php?id=<?= $info['id'] ?>"><h3><?= $info['nom'] ?></h3></a>
+                <p><?= get_age($info['birth_date']) ?> ans</p>
                 <p><?= $info['ville'] ?></p>
                 <a href="<?php switch ($info['service_1']) {
                     case 'garde' :
