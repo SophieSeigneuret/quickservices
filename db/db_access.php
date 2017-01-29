@@ -17,38 +17,13 @@ if ($mysqli->connect_errno) {
 }
 
 
-//// redaction de la requete sur les users
-//// selection de toutes les users
-//$query_str = 'SELECT * FROM `users`';
-//
-//// execution de la requete
-//$result = $mysqli->query($query_str);
-//
-//// chargement des donnees ligne par ligne (boucle while)
-//$data = array();
-//if ($result && ($result->num_rows > 0)) {
-//    while ($users = $result->fetch_assoc()) {
-//        $data[$users['id']] = $users;
-//    }
-//}
-//
-//var_dump($data);
-
-
-//var_dump($users);
-
-/**
- * Fournit un tableu d'article
- * @return array
- */
+// Requete : sélection de tous les users
 function get_users() {
     global $mysqli;
-    // Rédaction de la requete sur les users
-    $query_str = 'SELECT * FROM `users`'; // Sélection de tous les users
+    $query_str = 'SELECT * FROM `users` ';
+    $res = $mysqli->query($query_str); // exécution de la requête
 
-    $res = $mysqli->query($query_str); // xécution de la requête
-
-    // Chargement des données, ligne par ligne (boucle while)
+    // Chargement des données, ligne par ligne
     $data = array();
     if ($res && ($res->num_rows > 0)) {
         while ($users = $res->fetch_assoc()) {
@@ -59,16 +34,13 @@ function get_users() {
     return $data;
 }
 
-
-
+// Requete : sélection des 3 derniers users
 function get_last_3users() {
     global $mysqli;
-    // Rédaction de la requete sur les users
-    $query_str = 'SELECT * FROM `users` ORDER BY `date_entree` DESC LIMIT 0, 3'; // Sélection des 3 derniers users
+    $query_str = 'SELECT * FROM `users` ORDER BY `date_entree` DESC LIMIT 0, 3';
+    $res = $mysqli->query($query_str); // exécution de la requête
 
-    $res = $mysqli->query($query_str); // xécution de la requête
-
-    // Chargement des données, ligne par ligne (boucle while)
+    // Chargement des données, ligne par ligne
     $data = array();
     if ($res && ($res->num_rows > 0)) {
         while ($users = $res->fetch_assoc()) {
@@ -77,4 +49,39 @@ function get_last_3users() {
     }
     //var_dump($data);
     return $data;
+}
+
+// Requete : sélectionner 1 user par son id
+function get_user_by_id($id) {
+    global $mysqli;
+    $query_str = 'SELECT * FROM `users` WHERE id=' . $id;
+    $res = $mysqli->query($query_str);  // execution de la requete
+
+    // chargement des données de la ligne
+    $data = array();
+    if ($res && ($res->num_rows > 0)) {
+        $data = $res->fetch_assoc();
+    }
+    return $data;
+}
+
+// Requete : sélectionner 1 user par son mail
+function get_user_by_mail($mail) {
+    global $mysqli;
+    $query_str = 'SELECT * FROM `users` WHERE mail="' . $mail . '"';
+    $res = $mysqli->query($query_str);  // execution de la requete
+
+    // chargement des données de la ligne
+    $data = array();
+    if ($res && ($res->num_rows > 0)) {
+        $data = $res->fetch_assoc();
+    }
+    return $data;
+}
+
+
+
+// calcul de l'age de la personne par sa date de naissance
+function get_age($date) {
+    return intval(date('Y', time() - strtotime($date))) - 1970;  // merci stackoverflow  ;-)
 }

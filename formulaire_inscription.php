@@ -1,5 +1,6 @@
 <?php
-$page_title = 'formulaire inscription';
+//$page_title = 'formulaire inscription';
+require_once 'defines.php';
 require_once 'views/page_head.php';
 
 ?>
@@ -234,6 +235,3 @@ if ($en_reception && $nom_valide
     <p><a href="formulaire_connexion.php">J'ai déjà un compte</a></p>
     <p><span>Pas de compte ? </span><a href="inscription.php">Inscrivez-vous !</a></p>
 </div>
-
-
-</html>

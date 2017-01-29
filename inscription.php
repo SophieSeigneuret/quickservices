@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once 'defines.php';
-$page_title = 'inscription etape 1';
+//$page_title = 'inscription etape 1';
 ?>
 <?php
 require_once 'views/page_head.php';

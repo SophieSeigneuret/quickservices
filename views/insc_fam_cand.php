@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title><?= NOM_SITE, ':',$page_title?></title>
+    <title><?= 'quick_services'?></title>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="icon" type="image/gif" href="" />
 
 </head>
-<body id="wrapper">
+
+<?php
+//$page_title = 'formulaire inscription';
+require_once '../defines.php';
+?>
+<!--<body id="wrapper">-->
 <a href="../index.php"><img id="logo" src="../images/logo_provisoire.jpg" alt="logo quick services"/></a>
 <main>
 
@@ -52,16 +57,3 @@
 </body>
 </html>
 
-<!--<a href="garde_enfants.php" class="<?php /*if ($page_title == 'garde_enfants') {echo 'active';} */?>">
-    <div class="rubrique">
-        <img src="<?php
-/*        if ($page_title == 'garde_enfants') {
-            echo 'images/picto_garde_enfants_red.gif';
-        } else {
-            echo 'images/picto_garde_enfants.gif';
-        }
-        */?>" alt="picto garde d'enfants"/>
-        <hr/>
-        <h4>Garde<br/>d'enfant</h4>
-    </div>
-</a>-->
