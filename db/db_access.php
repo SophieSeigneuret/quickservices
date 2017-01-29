@@ -20,7 +20,7 @@ if ($mysqli->connect_errno) {
 // Requete : sélection de tous les users
 function get_users() {
     global $mysqli;
-    $query_str = 'SELECT * FROM `users` ';
+    $query_str = 'SELECT * FROM `users`';
     $res = $mysqli->query($query_str); // exécution de la requête
 
     // Chargement des données, ligne par ligne
