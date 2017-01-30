@@ -2,14 +2,20 @@
 /**
  *
  */
-define('DB_HOST', '127.0.0.1'); // Host DB localhost
+/*define('DB_HOST', '127.0.0.1'); // Host DB localhost
 //define('DB_USERNAME', 'root'); // username
 define('DB_USERNAME', 'quick_pilar'); // username
-define('DB_PASSWORD', 'ehsZQwuW3yZvShdM'); // password
+define('DB_PASSWORD', 'ehsZQwuW3yZvShdM'); // password*/
+
+define('DB_HOST', '127.0.0.1'); // Host DB localhost
+define('DB_USERNAME', 'root'); // username
+define('DB_PASSWORD', 'root'); // password
 
 //define('DB_PASSWORD', 'root'); // password
 define('DB_NAME', 'quickservices'); // nom de la DB
 define('PORT', 8889); // port
+
+
 
 $mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME, PORT);
 if ($mysqli->connect_errno) {
@@ -20,7 +26,7 @@ if ($mysqli->connect_errno) {
 // Requete : sélection de tous les users
 function get_users() {
     global $mysqli;
-    $query_str = 'SELECT * FROM `users`';
+    $query_str = 'SELECT * FROM `users` ORDER BY `date_entree` DESC LIMIT 0, 5';
     $res = $mysqli->query($query_str); // exécution de la requête
 
     // Chargement des données, ligne par ligne

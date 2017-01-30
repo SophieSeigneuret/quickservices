@@ -34,7 +34,7 @@ $item_valide = true;
     <div class="<?= $item_valide ? '' : 'invalid' ?>">
         <input type="checkbox" id="item_tout" name="items[]" value="item_tout"
             <?= array_key_exists('items', $_POST) && in_array('item_tout', $_POST['items']) ? ' checked="checked"': ''?> />
-        <label for="item_tout">Toutes</label>
+        <label for="item_tout">Tout</label>
     </div>
 
     <div class="<?= $item_valide ? '' : 'invalid' ?>">

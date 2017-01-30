@@ -31,15 +31,16 @@ $nom_valide = true;
 if (array_key_exists('saisie_nom', $_POST)) {
     // PHP assure le filtrage de la chaîne d'entrée
     $nom = filter_input(INPUT_POST, 'saisie_nom', FILTER_SANITIZE_STRING);
-    $nom_valide = (1 === preg_match('/\w{1,}/', $nom));
+    $nom_valide = (1 === preg_match('/[a-z]\w{1,}/', $nom));
 }
+//[A-Za-z ]*$
 
 // Réception du prenom
 $prenom = '';
 $prenom_valide = true;
 if (array_key_exists('saisie_prenom', $_POST)) {
     $prenom = filter_input(INPUT_POST, 'saisie_prenom', FILTER_SANITIZE_STRING);
-    $prenom_valide = (1 === preg_match('/\w{1,}/', $prenom));
+    $prenom_valide = (1 === preg_match('/[a-z]\w{1,}/', $prenom));
 }
 
 // Réception du courriel
@@ -54,7 +55,7 @@ $phone = '';
 $telephone_valide = true;
 if(array_key_exists('saisie_telephone', $_POST)){
     $phone = filter_input(INPUT_POST, 'saisie_telephone' , FILTER_SANITIZE_STRING);
-    $telephone_valide = (1 === preg_match('/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/', $phone));//mayusculas y minusculas
+    $telephone_valide = (1 === preg_match('/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/', $phone));
 }
 
 //adresse
@@ -62,7 +63,7 @@ $adresse = '';
 $adresse_valide = true;
 if(array_key_exists('saisie_adresse', $_POST)){
     $adresse = filter_input(INPUT_POST, 'saisie_adresse' , FILTER_SANITIZE_STRING);
-    $adresse_valide = (1 === preg_match('/\w{1,}/', $adresse));//mayusculas y minusculas
+    $adresse_valide = (1 === preg_match('/[a-z]\w{1,}/', $adresse));//
 }
 
 // Code postal
@@ -71,6 +72,13 @@ $cdPostal_valide = true;
 if (array_key_exists('saisie_cod_postal', $_POST)) {
     $cdpostal = filter_input(INPUT_POST, 'saisie_cod_postal', FILTER_SANITIZE_STRING);
     $cdPostal_valide = (1 === preg_match('/^[a-zA-Z]{1}[0-9]{1}[a-zA-Z]{1}(\-| |){1}[0-9]{1}[a-zA-Z]{1}[0-9]{1}$/', $cdpostal));
+}
+
+$password = '';
+$password_valide = true;
+if(array_key_exists('saisie_password', $_POST)){
+    $password = filter_input(INPUT_POST, 'saisie_password' , FILTER_SANITIZE_STRING);
+    $password_valide = (1 === preg_match('/^[a-zA-Z0-9_]{6}$/', $password));
 }
 
 // Réception des horaires choisis
@@ -114,7 +122,7 @@ if ($en_reception && $nom_valide
     && $cdPostal_valide
     && $horaire_valides) {
     // Les données de formulaire sont valides
-    header('Location:');
+    header('Location:index.php');
     exit;
 }
 
@@ -132,7 +140,7 @@ if ($en_reception && $nom_valide
             <input type="text" placeholder="votre nom" id="saisie_nom"
                    name="saisie_nom" class="<?= $nom_valide ? '' : 'invalid' ?>" value="<?= $nom ?>"/>
             <?php if ( ! $nom_valide) { ?>
-                <p>Le nom n'est pas valide.</p>
+                <p>Le nom n'est pas valide. Le nom doit contenir au moins deux caractères</p>
             <?php } ?>
         </div>
 
@@ -142,7 +150,7 @@ if ($en_reception && $nom_valide
             <input type="text" placeholder="votre prénom" id="saisie_prenom"
                    name="saisie_prenom" class="<?= $prenom_valide ? '' : 'invalid' ?>" value="<?= $prenom ?>"/>
             <?php if ( ! $prenom_valide) { ?>
-                <p>Le prenom n'est pas valide</p>
+                <p>Le prenom n'est pas valide. Le prenom doit contenir au moins deux caractères</p>
             <?php } ?>
         </div>
 
@@ -173,7 +181,7 @@ if ($en_reception && $nom_valide
             <input type="text" placeholder="votre adresse" id="saisie_adresse"
                    name="saisie_adresse" class="<?= $adresse_valide ? '' : 'invalid' ?>" value="<?= $adresse ?>"/>
             <?php if ( ! $adresse_valide) { ?>
-                <p>L'adresse n'est pas valide.</p>
+                <p>L'adresse n'est pas valide. L'adresse doit contenir au moins deux caractères</p>
             <?php } ?>
         </div>
 
@@ -186,6 +194,19 @@ if ($en_reception && $nom_valide
                 <p>Le code postal n'est pas valide.</p>
             <?php } ?>
         </div>
+
+        <!--password-->
+        <div>
+            <label for="saisie_password"><span>*</span> Mot de passe : </label>
+            <input type="password" placeholder="minimum six caractères" id="saisie_password"
+                   name="saisie_password" class="<?= $password_valide ? '' : 'invalid' ?>" value="<?= $password ?>"/>
+            <?php if ( ! $password_valide) { ?>
+                <p>Le password n'est pas valide. <br>Vous devez écrire au moins six caractères</p>
+            <?php } ?>
+        </div>
+
+
+
 
 
         <!--    horaire -->
@@ -224,7 +245,7 @@ if ($en_reception && $nom_valide
             <textarea name="textarea" placeholder="Description..." id="saisie_description"
                       class="<?= $description_valide ? '' : 'invalid' ?>" rows="5" cols="68" ></textarea>
             <?php if ( ! $description_valide) { ?>
-                <p>Vous devez faire une description</p>
+                <p>Vous devez écrire une description</p>
             <?php } ?>
         </div>
 

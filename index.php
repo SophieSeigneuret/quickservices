@@ -8,7 +8,6 @@ $page_title = ACCUEIL;
 
 $last_3users = get_last_3users();
 
-//var_dump($last_3users);
 
 ?>
 <main>
