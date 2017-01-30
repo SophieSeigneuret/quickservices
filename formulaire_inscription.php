@@ -3,9 +3,7 @@
 require_once 'defines.php';
 require_once 'views/page_head.php';
 
-?>
 
-<?php
 //var_dump($_POST);
 
 $liste_horaire = array('Choisir...', 'Temps partiel', 'Temps plein', 'Occasionnel', 'Le matin', 'Après midi');
@@ -23,7 +21,10 @@ $en_reception = array_key_exists('saisie_nom', $_POST)
     && array_key_exists('saisie_telephone', $_POST)
     && array_key_exists('saisie_adresse', $_POST)
     && array_key_exists('saisie_cod_postal', $_POST)
-    && array_key_exists('saisie_cod_postal', $_POST);
+    && array_key_exists('saisie_password', $_POST)
+    && array_key_exists('horaire', $_POST)
+    && array_key_exists('datepicker', $_POST)
+    && array_key_exists('textarea', $_POST);
 
 // Réception du nom
 $nom = '';
@@ -94,7 +95,7 @@ if ($en_reception && empty($temps)) {
 
 // Réception des dates calendrier choisis
 $calendrier_valide = true;
-$calendrier = array(); // Date sélectionnée par l'utilisateur
+$calendrier = ''; // Date sélectionnée par l'utilisateur
 if (array_key_exists('datepicker', $_POST)) {
     $calendrier = $_POST['datepicker'];
 }
@@ -105,9 +106,9 @@ if ($en_reception && empty($calendrier)) {
 
 // Réception des textarea
 $description_valide = true;
-$description = array();
-if (array_key_exists('saisie_description', $_POST)) {
-    $description = $_POST['saisie_description'];
+$description = '';
+if (array_key_exists('textarea', $_POST)) {
+    $description = $_POST['textarea'];
 }
 if ($en_reception && empty($description)) {
     $description_valide = false;
@@ -120,11 +121,15 @@ if ($en_reception && $nom_valide
     && $telephone_valide
     && $adresse_valide
     && $cdPostal_valide
-    && $horaire_valides) {
+    && $password_valide
+    && $horaire_valides
+    && $calendrier_valide
+    && $description_valide) {
     // Les données de formulaire sont valides
     header('Location:index.php');
     exit;
 }
+
 
 ?>
 <div id="form_inscripion">
@@ -233,6 +238,9 @@ if ($en_reception && $nom_valide
             <label for="datepicker"><span>*</span> Date : </label>
             <input type="date" name="datepicker" id="datepicker"
                    class="calendrier <?= $calendrier_valide ? '' : 'invalid' ?>" value="<?= $calendrier ?>"/>
+<!--            <button type="button" class="ui-datepicker-trigger">-->
+<!--                <img src="images/calendar_icon.gif" alt="">-->
+<!--            </button>-->
             <?php if ( ! $calendrier_valide) { ?>
                 <p>Une date doit être sélectionnée.</p>
             <?php } ?>
@@ -256,3 +264,9 @@ if ($en_reception && $nom_valide
     <p><a href="formulaire_connexion.php">J'ai déjà un compte</a></p>
     <p><span>Pas de compte ? </span><a href="inscription.php">Inscrivez-vous !</a></p>
 </div>
+
+
+<?php
+require_once 'views/javascript.php';
+?>
+</html>
