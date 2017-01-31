@@ -1,7 +1,6 @@
 <?php
 //$page_title = 'formulaire inscription';
 require_once 'defines.php';
-require_once 'views/page_head.php';
 
 
 //var_dump($_POST);
@@ -130,6 +129,7 @@ if ($en_reception && $nom_valide
     exit;
 }
 
+require_once 'views/page_head.php';
 
 ?>
 <div id="form_inscripion">
