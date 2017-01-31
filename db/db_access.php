@@ -2,19 +2,8 @@
 /**
  *
  */
-/*define('DB_HOST', '127.0.0.1'); // Host DB localhost
-//define('DB_USERNAME', 'root'); // username
-define('DB_USERNAME', 'quick_pilar'); // username
-define('DB_PASSWORD', 'ehsZQwuW3yZvShdM'); // password*/
 
-define('DB_HOST', '127.0.0.1'); // Host DB localhost
-define('DB_USERNAME', 'root'); // username
-define('DB_PASSWORD', 'root'); // password
-
-//define('DB_PASSWORD', 'root'); // password
-define('DB_NAME', 'quickservices'); // nom de la DB
-define('PORT', 8889); // port
-
+require_once 'define.php';
 
 
 $mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME, PORT);
@@ -22,6 +11,7 @@ if ($mysqli->connect_errno) {
     echo "Echec lors de la connexion à MySQL : ", $mysqli->connect_error;
 }
 
+$mysqli->set_charset("utf8");
 
 // Requete : sélection de tous les users qui font de la garde d'enfants
 function get_users_garde() {
