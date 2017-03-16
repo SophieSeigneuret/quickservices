@@ -15,16 +15,16 @@ Site réalisé à 2 dans le cadre d’un projet scolaire (ISI Montréal)
 
 **Page réalisées :**
 **Page d’accueil :** 
-- lien de connexion ou d'inscription en haut
+- lien de connexion ou d'inscription dans le header
 - utilisation d'une base de données pour répertorier toutes les personnes proposant leurs services (une personne peut proposer 1, 2 ou 3 services)
 - lien vers les 3 principaux services soit par les icones, soit par le formulaire de recherche 
 - affichage des 3 derniers candidats grâce à la base de données et requête MySQL
 - un seul fichier HTML pour les pages "services", implémentation dynamique en PHP (gestion des query string)
 
 **Page détail :** 
-- toutes les informations de la personne sont affichées grâce à la base de données 
+- toutes les informations de la personne sont affichées grâce à la base de données et requêtes MySQL
 - affichage des icônes de services selon que la personne fait 1, 2 ou 3 services
-- boite de dialog jQuery pour les informations de contact
+- affichage des informations de contact grâce à la boite de dialog jQuery
 
 **Formulaire de connexion :**
 - validation des champs en PHP (affichage en rouge si champs mal ou non rempli)
